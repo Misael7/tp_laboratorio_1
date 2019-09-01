@@ -58,14 +58,22 @@ int operacionMult(float* operaA, float* operaB, float* result) //Multiplica oper
 	*result = resultMult;
 	return 0;
 }
-int operacionFact(float* operaA, float* operaB,float* resultA,float*resultB) //Retorna factorial de los numeros ingresados por usuario.
+int operacionFact(float* operaA, float* operaB,long*resultA,long*resultB) //Retorna factorial de los numeros ingresados por usuario.
 {
-	float factA = *operaA;
-	float factB = *operaB;
+	long factA = *operaA;
+	long factB = *operaB;
 	//Setteo valores iniciales para los acumuladores de cada factorial, de lo contrario multiplican por 0.
-	float resultFactA = 1;
-	float resultFactB = 1;
+	long resultFactA = 1;
+	long resultFactB = 1;
+	//Comprobación del valor a obtener factorial
 
+	if(factA < 0 || factB < 0)
+	{
+		printf("No se puede hacer factorial de un negativo");
+		return -1;
+	}
+	else
+	{
 	//las variables a y b multiplican avanzando hasta llegar al valor ingresado por el usuario, obteniendo un factorial.
 	for(int a=1;a<=factA;a++)
 	{
@@ -80,6 +88,7 @@ int operacionFact(float* operaA, float* operaB,float* resultA,float*resultB) //R
 	//printf("El factorial de %f es: %f \nEl factorial de %f es: %f ",factA,resultFactA,factB,resultFactB);
 
 	return 0;
+	}
 }
 
 

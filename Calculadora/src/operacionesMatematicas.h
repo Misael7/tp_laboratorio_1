@@ -14,7 +14,7 @@ int operacionSuma(float* operaA, float* operaB, float* result);
 int operacionResta(float* operaA, float* operaB, float* result);
 int operacionDiv(float* operaA, float* operaB, float* result);
 int operacionMult(float* operaA, float* operaB, float* result);
-int operacionFact(float* operaA, float* operaB,float* resultA,float*resultB);
+int operacionFact(float* operaA, float* operaB,long* resultA,long*resultB);
 
 
 

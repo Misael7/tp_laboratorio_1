@@ -19,8 +19,8 @@ int main(void)
 	float operaA=0;
 	float operaB=0;
 	float result=0;
-	float resultA=0;
-	float resultB=0;
+	long resultA=0;
+	long resultB=0;
 	int operacionMat=0;
 
 	//Ingresar operandos
@@ -40,6 +40,7 @@ int main(void)
 		printf("Error, debe ingresar un numero, distinto de 0 saliendo del programa.");
 		return -1;
 	}
+	//Se puede sacar la verificacion para realizar las operaciones con 0, pero también acepta datos no-numericos
 
 	//Mensaje menu
 	printf("Los operadores ingresados son %f y %f para A y B respectivamente.\n ",operaA,operaB);
@@ -80,7 +81,11 @@ int main(void)
 		//factorial
 		case 5:
 			operacionFact(&operaA,&operaB,&resultA,&resultB);
-			printf("El factorial de %f es: %f \nEl factorial de %f es: %f ",operaA,resultA,operaB,resultB);
+			//Comprobacion vectorial positivo
+			if(!(resultA==0 || resultB==0))
+			{
+				printf("El factorial de %f es: %ld \nEl factorial de %f es: %ld ",operaA,resultA,operaB,resultB);
+			}
 			break;
 		//opcion incorrecta
 		default:
