@@ -29,7 +29,7 @@ int main(void)
 	//Verificacion operando A
 	if(!(operaA/operaA==1))
 	{
-		printf("Error, debe ingresar un numero, saliendo del programa.");
+		printf("Error, debe ingresar un numero, distinto de 0 saliendo del programa.");
 		return -1;
 	}
 	printf("Ingrese el segundo operador: ");
@@ -37,8 +37,8 @@ int main(void)
 	//Verificacion operando B
 	if(!(operaB/operaB==1 ))
 	{
-			printf("Error, debe ingresar un numero, saliendo del programa.");
-			return -1;
+		printf("Error, debe ingresar un numero, distinto de 0 saliendo del programa.");
+		return -1;
 	}
 
 	//Mensaje menu
