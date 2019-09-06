@@ -29,9 +29,9 @@ int main(void)
 	int operacionMat=0;
 
 	//Ingresar operandos
-	printf("Ingrese primer operando");
+	printf("Ingrese primer operando:\t");
 	getFloatUTN(&operaA);
-	printf("Ingrese segundo operando");
+	printf("Ingrese segundo operando:\t");
 	getFloatUTN(&operaB);
 
 	//Mensaje menu
