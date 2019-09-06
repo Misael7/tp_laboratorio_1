@@ -10,7 +10,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdio_ext.h>
 #include "operacionesMatematicas.h"
+#include "getNumValue.h"
+
+
+#define FLUSH __fpurge(stdin); //Para no escribir la funcion entera
 
 
 int main(void)
@@ -24,23 +29,10 @@ int main(void)
 	int operacionMat=0;
 
 	//Ingresar operandos
-	printf("Ingrese el primer operador: ");
-	scanf("%f",&operaA);
-	//Verificacion operando A
-	if(!(operaA/operaA==1))
-	{
-		printf("Error, debe ingresar un numero, distinto de 0 saliendo del programa.");
-		return -1;
-	}
-	printf("Ingrese el segundo operador: ");
-	scanf("%f",&operaB);
-	//Verificacion operando B
-	if(!(operaB/operaB==1 ))
-	{
-		printf("Error, debe ingresar un numero, distinto de 0 saliendo del programa.");
-		return -1;
-	}
-	//Se puede sacar la verificacion para realizar las operaciones con 0, pero también acepta datos no-numericos
+	printf("Ingrese primer operando");
+	getFloatUTN(&operaA);
+	printf("Ingrese segundo operando");
+	getFloatUTN(&operaB);
 
 	//Mensaje menu
 	printf("Los operadores ingresados son %f y %f para A y B respectivamente.\n ",operaA,operaB);
