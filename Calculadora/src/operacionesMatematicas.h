@@ -7,8 +7,7 @@
 
 #ifndef OPERACIONESMATEMATICAS_H_
 #define OPERACIONESMATEMATICAS_H_
-#include <stdio.h>
-#include <stdlib.h>
+
 
 int operacionSuma(float* operaA, float* operaB, float* result);
 int operacionResta(float* operaA, float* operaB, float* result);
