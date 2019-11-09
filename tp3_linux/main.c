@@ -48,7 +48,7 @@ int main()
 
     LinkedList* listaEmpleados = ll_newLinkedList();
     do{
-    	printf("1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n");
+    	printf("\n1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n");
     	printf("2. Cargar los datos de los empleados desde el archivo data.csv (modo binario).\n");
     	printf("3. Alta de empleado\n");
     	printf("4. Modificar datos de empleado\n");
