@@ -604,8 +604,8 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 
 void ll_swapper(Node *first,Node *second)
 {
-    Node* auxNode = first->pElement;
-    first->pElement = second->pElement;
-    second->pElement = auxNode;
+    Node* auxNode = first;
+    first = second;
+    second= auxNode;
 }
 
