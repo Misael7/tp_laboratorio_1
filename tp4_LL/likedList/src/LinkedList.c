@@ -577,35 +577,32 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
     {
     	do
     	{
+    		swapFlag=0;
     		for(int i = 0 ; i < length-1 ; i++)
     		{
     			firstNode = getNode(this, i);
     			secondNode = getNode(this, i+1);
-    			if(order == 1 && pFunc( firstNode->pElement, secondNode->pElement)>0) //usa el valor de retorno pFunc como condicional
+    			if(order == 1 && pFunc(firstNode->pElement, secondNode->pElement)>0) //usa el valor de retorno pFunc como condicional
     			{
     				ll_swapper(firstNode, secondNode);
     				swapFlag = 1;
     			}
-    			if(order == 0 && pFunc( firstNode->pElement, secondNode->pElement)<0) //usa el valor de retorno pFunc como condicional
+    			if(order == 0 && pFunc(firstNode->pElement, secondNode->pElement)<0) //usa el valor de retorno pFunc como condicional
     			{
     				ll_swapper(firstNode, secondNode);
     				swapFlag = 1;
     			}
-
     		}
-
     	}while(swapFlag!=0);
         returnAux = 0;
     }
-
     return returnAux;
-
 }
 
 void ll_swapper(Node *first,Node *second)
 {
-    Node* auxNode = first;
-    first = second;
-    second= auxNode;
+    Node* auxNode = first->pElement;
+    first->pElement= second->pElement;
+    second->pElement= auxNode;
 }
 
